@@ -1,0 +1,24 @@
+paquete  io.bimmergestalt.idriveconnectaddons.screenmirror
+
+importar  androidx.test.platform.app.InstrumentationRegistry
+importar  androidx.test.ext.junit.runners.AndroidJUnit4
+
+importar  org.junit.Prueba
+importar  org.junit.runner.RunWith
+
+importar  org.junit.Assert.*
+
+/* *
+* Prueba instrumentada, que se ejecutará en un dispositivo Android.
+*
+* Consulte [documentación de prueba] (http://d.android.com/tools/testing).
+ */
+@EjecutarCon( AndroidJUnit4 :: clase )
+clase  EjemploPruebaInstrumentada {
+    @Prueba
+    diversión  useAppContext () {
+        // Contexto de la aplicación bajo prueba.
+        val appContext =  InstrumentationRegistry .getInstrumentation().targetContext
+        afirmarEquals( " me.hufman.idriveconnectaddons.screen_mirror " , appContext.packageName)
+    }
+}
